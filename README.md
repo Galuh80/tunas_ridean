@@ -80,12 +80,14 @@ SETUP CONFIG: You have to set several variables in the config.conf file which is
    ```sh
    python3 odoo-14.0/odoo-server -c conf/config.conf
    ```
+7. Install module
+   ![Alt text](images/example.png)
 
 <!-- USAGE EXAMPLES -->
 ## API Swagger
 You can access the API at the following URL:
 
-6. API Odoo
+1. API Odoo
    ```sh
    http://localhost:8069/api/room_booking/status/
    ```
