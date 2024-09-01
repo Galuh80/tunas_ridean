@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_booking_tree" model="ir.ui.view">
+        <field name="name">room.booking.booking.tree</field>
+        <field name="model">room.booking.booking</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="room_id"/>
+                <field name="booker_name"/>
+                <field name="booking_date"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_booking_form" model="ir.ui.view">
+        <field name="name">room.booking.booking.form</field>
+        <field name="model">room.booking.booking</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_confirm" string="Confirm" type="object" states="draft" class="oe_highlight"/>
+                    <button name="action_done" string="Mark as Done" type="object" states="ongoing" class="oe_highlight"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="room_id"/>
+                        <field name="booker_name"/>
+                        <field name="booking_date"/>
+                        <field name="notes"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_booking" model="ir.actions.act_window">
+        <field name="name">Bookings</field>
+        <field name="res_model">room.booking.booking</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_booking" name="Bookings" parent="menu_room_booking" action="action_booking" sequence="20"/>
+</odoo>
