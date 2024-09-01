@@ -81,7 +81,11 @@ SETUP CONFIG: You have to set several variables in the config.conf file which is
    python3 odoo-14.0/odoo-server -c conf/config.conf
    ```
 7. Install module
-   ![Alt text](images/example.png)
+   You can find the module with search using keyword "boking"
+   ![Alt text](task_two/odoo-14.0/Screenshots/odoo1.png)
+
+   After that you can install the module
+   ![Alt text](task_two/odoo-14.0/Screenshots/odoo2.png)
 
 <!-- USAGE EXAMPLES -->
 ## API Swagger
